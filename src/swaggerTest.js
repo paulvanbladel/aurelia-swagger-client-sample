@@ -10,7 +10,7 @@ export class SwaggerTest{
       this.api = generator.create(this.petStoreSchema);
       console.log(this.api);
       this.api.auth('secret-key');
-      this.api.pet.addPet({id: 1, name: 'Paul Van Bladel'}).then((response)=>{
+      this.api.pet.addPet({id: 1, name: 'Paul Van Bladel','status':'pending'}).then((response)=>{
         console.log(response);
         return this.api.pet.getPetById(1);
       }).then((data)=>{
